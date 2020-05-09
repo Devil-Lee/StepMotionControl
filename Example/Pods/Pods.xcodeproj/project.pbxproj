@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1579E778BAEB7E2A313BCE64718C9D18 /* StepMotionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DCBA2BEFF10D0F0487366FFF0883E1 /* StepMotionRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		251EFD5BB5F4FE479ECCA7A3D1A05656 /* StepMotionControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1ECCD884A916A32774A941283C44020 /* StepMotionControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26A4E2FA0ED0F2B13B41DC06F81DFACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		30B1046FB7AB0B5FB06513F9EFBC7FCF /* Pods-StepMotionControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5579A015907407A1B991487683D59A2 /* Pods-StepMotionControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3851194A08CA0A426C50B1E00C3C097B /* Pods-StepMotionControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A7FBF33C3A3BFB224D16F1864178BA /* Pods-StepMotionControl_Tests-dummy.m */; };
+		517CB5EF02784812E62230B595CFF635 /* StepMotionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90994DE6E3B906C6730E18FE945F6FD2 /* StepMotionRequest.m */; };
+		55281A048FA436F76A952C051639D509 /* StepMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43EA15312EAEE967880E451DE2B020 /* StepMotionManager.m */; };
+		6084656C552DF59431148A306E56642E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6F54AB5370D6EF0D0476ABF92D4468DA /* Pods-StepMotionControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A797ED530067030EB576DAD65A801 /* Pods-StepMotionControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FC5A4A09B6018850761792F0BCAF0D6 /* Pods-StepMotionControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 417477BEB29D683E1689FBDF6DC2C538 /* Pods-StepMotionControl_Example-dummy.m */; };
+		A9D85CE8FECB54E70623C7C755E15479 /* StepModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6B67C3373DDEFC90956D0A696B473C /* StepModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2EAE93B0C426CD148C23575EE18A78 /* StepMotionControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE705AB62B002CC5DF730F02C98EED07 /* StepMotionControl-dummy.m */; };
+		E243941588A75A8CE88B1858A189E150 /* StepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F0C27F4C872E0B587AE675D32D5ED /* StepModel.m */; };
+		E3354BEFCA565FD8DE1B2D17006C2C41 /* StepMotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C8BD93B53225039E92CD373CAB9E907B /* StepMotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F217A992AB7050E142395C24C129B765 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EBB797376B4B24AFD7707BEA8B72C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AFDFEA50EACF3EFAB9A93A4A5A91595;
+			remoteInfo = StepMotionControl;
+		};
+		ED5121F4432B5458D814822B7ED46BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B643BC87EA3AEDD0BFC4F3AEC69FA304;
+			remoteInfo = "Pods-StepMotionControl_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CEBA988ED4ED3299B023C74FF610157 /* Pods-StepMotionControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepMotionControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D4A797ED530067030EB576DAD65A801 /* Pods-StepMotionControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StepMotionControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		1F48232881BB03114AEDFB18945DE6A4 /* StepMotionControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StepMotionControl.modulemap; sourceTree = "<group>"; };
+		3027E66D446CB4339F9948A19F49D13E /* Pods-StepMotionControl_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepMotionControl_Tests-Info.plist"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		413F0C27F4C872E0B587AE675D32D5ED /* StepModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StepModel.m; path = StepMotionControl/Classes/StepModel.m; sourceTree = "<group>"; };
+		417477BEB29D683E1689FBDF6DC2C538 /* Pods-StepMotionControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StepMotionControl_Example-dummy.m"; sourceTree = "<group>"; };
+		510000CA14906B10099372DD101DAE08 /* Pods_StepMotionControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StepMotionControl_Example.framework; path = "Pods-StepMotionControl_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0E1D45A76927EACE0790FBCD2DDF45 /* Pods-StepMotionControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepMotionControl_Example.release.xcconfig"; sourceTree = "<group>"; };
+		661273D3C2F0AB78EF085587C1A7D417 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6A6B67C3373DDEFC90956D0A696B473C /* StepModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StepModel.h; path = StepMotionControl/Classes/StepModel.h; sourceTree = "<group>"; };
+		726E1C2D68A3B281B6FE4E6FA893F409 /* Pods-StepMotionControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StepMotionControl_Example-frameworks.sh"; sourceTree = "<group>"; };
+		90994DE6E3B906C6730E18FE945F6FD2 /* StepMotionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StepMotionRequest.m; path = StepMotionControl/Classes/StepMotionRequest.m; sourceTree = "<group>"; };
+		989D48E3FA9C0A636ED4D8D7EA777434 /* StepMotionControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StepMotionControl.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F51CA148B7FA041C31D4737A1095E3E /* StepMotionControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StepMotionControl-prefix.pch"; sourceTree = "<group>"; };
+		ADC30B9148B65897F4D2AF92F89A510D /* Pods-StepMotionControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StepMotionControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B07DD2B1FF7591F3C4B20FF548095145 /* Pods-StepMotionControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepMotionControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5579A015907407A1B991487683D59A2 /* Pods-StepMotionControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StepMotionControl_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B71C942A78831C4617BD6BEAD8A578CF /* Pods-StepMotionControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StepMotionControl_Tests.modulemap"; sourceTree = "<group>"; };
+		B78D3DCAB6210971E7BFF3D5232D075A /* Pods-StepMotionControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepMotionControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BA7E4C133829C336454060BC51BA86E7 /* Pods-StepMotionControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepMotionControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BB0673C0EAA6560979E7DD48DD7AC1EB /* Pods-StepMotionControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StepMotionControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BB1A6EE45C6D0DCAFE3F8949E41CBD13 /* Pods-StepMotionControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StepMotionControl_Example.modulemap"; sourceTree = "<group>"; };
+		BF43EA15312EAEE967880E451DE2B020 /* StepMotionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StepMotionManager.m; path = StepMotionControl/Classes/StepMotionManager.m; sourceTree = "<group>"; };
+		C1ECCD884A916A32774A941283C44020 /* StepMotionControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StepMotionControl-umbrella.h"; sourceTree = "<group>"; };
+		C8BD93B53225039E92CD373CAB9E907B /* StepMotionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StepMotionManager.h; path = StepMotionControl/Classes/StepMotionManager.h; sourceTree = "<group>"; };
+		D1A7FBF33C3A3BFB224D16F1864178BA /* Pods-StepMotionControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StepMotionControl_Tests-dummy.m"; sourceTree = "<group>"; };
+		D78EF01E1AA977C3745E0F5097EB334E /* StepMotionControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StepMotionControl.debug.xcconfig; sourceTree = "<group>"; };
+		DD92EECFA861A35C539E141481F003DD /* Pods_StepMotionControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StepMotionControl_Tests.framework; path = "Pods-StepMotionControl_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE705AB62B002CC5DF730F02C98EED07 /* StepMotionControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StepMotionControl-dummy.m"; sourceTree = "<group>"; };
+		E689CE3F4A269B510C91A4E8E8AA6F34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E7DDE8DDDD3CEDC2C58F394B3C8898F8 /* Pods-StepMotionControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StepMotionControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EBC7DCDE11FE4B68A765C31A4E2A0FC1 /* StepMotionControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "StepMotionControl-Info.plist"; sourceTree = "<group>"; };
+		F063B55DD65CA175789909A283E6703E /* Pods-StepMotionControl_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StepMotionControl_Example-Info.plist"; sourceTree = "<group>"; };
+		F186DFB33A7C6F43626BD5A6BAE6880D /* StepMotionControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = StepMotionControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F347F0621EF4274CD289F85FED04B073 /* StepMotionControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StepMotionControl.framework; path = StepMotionControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DCBA2BEFF10D0F0487366FFF0883E1 /* StepMotionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StepMotionRequest.h; path = StepMotionControl/Classes/StepMotionRequest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D18B71519055EABC1556D275E425794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F217A992AB7050E142395C24C129B765 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5FBBC11D3F5F82BFD76A4581B91DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6084656C552DF59431148A306E56642E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B006F293524D995DD454CDC065DCD479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A4E2FA0ED0F2B13B41DC06F81DFACA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07806E8B83C1E3124D4EBA6D142F3A84 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E689CE3F4A269B510C91A4E8E8AA6F34 /* LICENSE */,
+				661273D3C2F0AB78EF085587C1A7D417 /* README.md */,
+				F186DFB33A7C6F43626BD5A6BAE6880D /* StepMotionControl.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		1059EFAFD72864D195387A3EA08DAFF4 /* StepMotionControl */ = {
+			isa = PBXGroup;
+			children = (
+				6A6B67C3373DDEFC90956D0A696B473C /* StepModel.h */,
+				413F0C27F4C872E0B587AE675D32D5ED /* StepModel.m */,
+				C8BD93B53225039E92CD373CAB9E907B /* StepMotionManager.h */,
+				BF43EA15312EAEE967880E451DE2B020 /* StepMotionManager.m */,
+				F8DCBA2BEFF10D0F0487366FFF0883E1 /* StepMotionRequest.h */,
+				90994DE6E3B906C6730E18FE945F6FD2 /* StepMotionRequest.m */,
+				07806E8B83C1E3124D4EBA6D142F3A84 /* Pod */,
+				CF9B6E7C8DDC1BED41A558E25710979C /* Support Files */,
+			);
+			name = StepMotionControl;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		179DD8BF1B4F152EE537E5A8FE8AD084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				510000CA14906B10099372DD101DAE08 /* Pods_StepMotionControl_Example.framework */,
+				DD92EECFA861A35C539E141481F003DD /* Pods_StepMotionControl_Tests.framework */,
+				F347F0621EF4274CD289F85FED04B073 /* StepMotionControl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18D20AEF094CDB0023565CC754C2489A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1059EFAFD72864D195387A3EA08DAFF4 /* StepMotionControl */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3C9CB2B6EB959DDED7FE0DC532075061 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C21B48B076851BE1DFEED3C4B49C568 /* Pods-StepMotionControl_Example */,
+				DC1B31527BD856AFA1C1E1D2D61F7E89 /* Pods-StepMotionControl_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4C21B48B076851BE1DFEED3C4B49C568 /* Pods-StepMotionControl_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BB1A6EE45C6D0DCAFE3F8949E41CBD13 /* Pods-StepMotionControl_Example.modulemap */,
+				E7DDE8DDDD3CEDC2C58F394B3C8898F8 /* Pods-StepMotionControl_Example-acknowledgements.markdown */,
+				BA7E4C133829C336454060BC51BA86E7 /* Pods-StepMotionControl_Example-acknowledgements.plist */,
+				417477BEB29D683E1689FBDF6DC2C538 /* Pods-StepMotionControl_Example-dummy.m */,
+				726E1C2D68A3B281B6FE4E6FA893F409 /* Pods-StepMotionControl_Example-frameworks.sh */,
+				F063B55DD65CA175789909A283E6703E /* Pods-StepMotionControl_Example-Info.plist */,
+				1D4A797ED530067030EB576DAD65A801 /* Pods-StepMotionControl_Example-umbrella.h */,
+				B78D3DCAB6210971E7BFF3D5232D075A /* Pods-StepMotionControl_Example.debug.xcconfig */,
+				5B0E1D45A76927EACE0790FBCD2DDF45 /* Pods-StepMotionControl_Example.release.xcconfig */,
+			);
+			name = "Pods-StepMotionControl_Example";
+			path = "Target Support Files/Pods-StepMotionControl_Example";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				18D20AEF094CDB0023565CC754C2489A /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				179DD8BF1B4F152EE537E5A8FE8AD084 /* Products */,
+				3C9CB2B6EB959DDED7FE0DC532075061 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CF9B6E7C8DDC1BED41A558E25710979C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F48232881BB03114AEDFB18945DE6A4 /* StepMotionControl.modulemap */,
+				DE705AB62B002CC5DF730F02C98EED07 /* StepMotionControl-dummy.m */,
+				EBC7DCDE11FE4B68A765C31A4E2A0FC1 /* StepMotionControl-Info.plist */,
+				9F51CA148B7FA041C31D4737A1095E3E /* StepMotionControl-prefix.pch */,
+				C1ECCD884A916A32774A941283C44020 /* StepMotionControl-umbrella.h */,
+				D78EF01E1AA977C3745E0F5097EB334E /* StepMotionControl.debug.xcconfig */,
+				989D48E3FA9C0A636ED4D8D7EA777434 /* StepMotionControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StepMotionControl";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1B31527BD856AFA1C1E1D2D61F7E89 /* Pods-StepMotionControl_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B71C942A78831C4617BD6BEAD8A578CF /* Pods-StepMotionControl_Tests.modulemap */,
+				ADC30B9148B65897F4D2AF92F89A510D /* Pods-StepMotionControl_Tests-acknowledgements.markdown */,
+				B07DD2B1FF7591F3C4B20FF548095145 /* Pods-StepMotionControl_Tests-acknowledgements.plist */,
+				D1A7FBF33C3A3BFB224D16F1864178BA /* Pods-StepMotionControl_Tests-dummy.m */,
+				3027E66D446CB4339F9948A19F49D13E /* Pods-StepMotionControl_Tests-Info.plist */,
+				B5579A015907407A1B991487683D59A2 /* Pods-StepMotionControl_Tests-umbrella.h */,
+				1CEBA988ED4ED3299B023C74FF610157 /* Pods-StepMotionControl_Tests.debug.xcconfig */,
+				BB0673C0EAA6560979E7DD48DD7AC1EB /* Pods-StepMotionControl_Tests.release.xcconfig */,
+			);
+			name = "Pods-StepMotionControl_Tests";
+			path = "Target Support Files/Pods-StepMotionControl_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		40F3E6A70A8D6F0BCE61D3ADAAA76334 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B1046FB7AB0B5FB06513F9EFBC7FCF /* Pods-StepMotionControl_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E3975A20858393263A49401AAF84095 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D85CE8FECB54E70623C7C755E15479 /* StepModel.h in Headers */,
+				251EFD5BB5F4FE479ECCA7A3D1A05656 /* StepMotionControl-umbrella.h in Headers */,
+				E3354BEFCA565FD8DE1B2D17006C2C41 /* StepMotionManager.h in Headers */,
+				1579E778BAEB7E2A313BCE64718C9D18 /* StepMotionRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8FBA6305ACAD4189E7FDAA5E640A5FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F54AB5370D6EF0D0476ABF92D4468DA /* Pods-StepMotionControl_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		266673A1EA52C111C88A0FF08CCBE727 /* Pods-StepMotionControl_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9113FAC65011EA3294CB301E7C3D2F64 /* Build configuration list for PBXNativeTarget "Pods-StepMotionControl_Tests" */;
+			buildPhases = (
+				40F3E6A70A8D6F0BCE61D3ADAAA76334 /* Headers */,
+				15EBFED5CAD19166D93E53B80347381F /* Sources */,
+				5D18B71519055EABC1556D275E425794 /* Frameworks */,
+				6FACF9E366113FB020E986E5FE0073A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AF54114505E13564B57F48C03E25E13 /* PBXTargetDependency */,
+			);
+			name = "Pods-StepMotionControl_Tests";
+			productName = "Pods-StepMotionControl_Tests";
+			productReference = DD92EECFA861A35C539E141481F003DD /* Pods_StepMotionControl_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5AFDFEA50EACF3EFAB9A93A4A5A91595 /* StepMotionControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BEAFE5952475A6E501DB3B3A9717417 /* Build configuration list for PBXNativeTarget "StepMotionControl" */;
+			buildPhases = (
+				5E3975A20858393263A49401AAF84095 /* Headers */,
+				FF4726E1063F14212B3B39EE52F41A8C /* Sources */,
+				B006F293524D995DD454CDC065DCD479 /* Frameworks */,
+				FAD6FAFCB9D504C8365D58E4B181B4B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StepMotionControl;
+			productName = StepMotionControl;
+			productReference = F347F0621EF4274CD289F85FED04B073 /* StepMotionControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B643BC87EA3AEDD0BFC4F3AEC69FA304 /* Pods-StepMotionControl_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF94DE95FC76B2A4806D91BA333A87BA /* Build configuration list for PBXNativeTarget "Pods-StepMotionControl_Example" */;
+			buildPhases = (
+				D8FBA6305ACAD4189E7FDAA5E640A5FC /* Headers */,
+				545ADA07A41699AADAE8E5B14DAA1998 /* Sources */,
+				7E5FBBC11D3F5F82BFD76A4581B91DCE /* Frameworks */,
+				647671D4AA20743CA0C9DD7A5D83C168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C7572564B8CB84670ED033E45CE302 /* PBXTargetDependency */,
+			);
+			name = "Pods-StepMotionControl_Example";
+			productName = "Pods-StepMotionControl_Example";
+			productReference = 510000CA14906B10099372DD101DAE08 /* Pods_StepMotionControl_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 179DD8BF1B4F152EE537E5A8FE8AD084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B643BC87EA3AEDD0BFC4F3AEC69FA304 /* Pods-StepMotionControl_Example */,
+				266673A1EA52C111C88A0FF08CCBE727 /* Pods-StepMotionControl_Tests */,
+				5AFDFEA50EACF3EFAB9A93A4A5A91595 /* StepMotionControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		647671D4AA20743CA0C9DD7A5D83C168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FACF9E366113FB020E986E5FE0073A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD6FAFCB9D504C8365D58E4B181B4B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15EBFED5CAD19166D93E53B80347381F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3851194A08CA0A426C50B1E00C3C097B /* Pods-StepMotionControl_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545ADA07A41699AADAE8E5B14DAA1998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC5A4A09B6018850761792F0BCAF0D6 /* Pods-StepMotionControl_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF4726E1063F14212B3B39EE52F41A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E243941588A75A8CE88B1858A189E150 /* StepModel.m in Sources */,
+				BB2EAE93B0C426CD148C23575EE18A78 /* StepMotionControl-dummy.m in Sources */,
+				55281A048FA436F76A952C051639D509 /* StepMotionManager.m in Sources */,
+				517CB5EF02784812E62230B595CFF635 /* StepMotionRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AF54114505E13564B57F48C03E25E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-StepMotionControl_Example";
+			target = B643BC87EA3AEDD0BFC4F3AEC69FA304 /* Pods-StepMotionControl_Example */;
+			targetProxy = ED5121F4432B5458D814822B7ED46BBA /* PBXContainerItemProxy */;
+		};
+		F5C7572564B8CB84670ED033E45CE302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StepMotionControl;
+			target = 5AFDFEA50EACF3EFAB9A93A4A5A91595 /* StepMotionControl */;
+			targetProxy = 2EBB797376B4B24AFD7707BEA8B72C15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A402F0D87B51D89332727AB7B340303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78D3DCAB6210971E7BFF3D5232D075A /* Pods-StepMotionControl_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0FF260FDE602969B6DDDC72EBDC9B956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CEBA988ED4ED3299B023C74FF610157 /* Pods-StepMotionControl_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StepMotionControl_Tests/Pods-StepMotionControl_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepMotionControl_Tests/Pods-StepMotionControl_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5E7304E66690936C10BC9C293514208B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0673C0EAA6560979E7DD48DD7AC1EB /* Pods-StepMotionControl_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StepMotionControl_Tests/Pods-StepMotionControl_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepMotionControl_Tests/Pods-StepMotionControl_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C3B828740024F9B3089E3D0239DDA9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 989D48E3FA9C0A636ED4D8D7EA777434 /* StepMotionControl.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StepMotionControl/StepMotionControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StepMotionControl/StepMotionControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StepMotionControl/StepMotionControl.modulemap";
+				PRODUCT_MODULE_NAME = StepMotionControl;
+				PRODUCT_NAME = StepMotionControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4A61E33128AF0E16243313895C69D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0E1D45A76927EACE0790FBCD2DDF45 /* Pods-StepMotionControl_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA03D73907A8AC18298D5FFDDF5440C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78EF01E1AA977C3745E0F5097EB334E /* StepMotionControl.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StepMotionControl/StepMotionControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StepMotionControl/StepMotionControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StepMotionControl/StepMotionControl.modulemap";
+				PRODUCT_MODULE_NAME = StepMotionControl;
+				PRODUCT_NAME = StepMotionControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BEAFE5952475A6E501DB3B3A9717417 /* Build configuration list for PBXNativeTarget "StepMotionControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA03D73907A8AC18298D5FFDDF5440C9 /* Debug */,
+				C3B828740024F9B3089E3D0239DDA9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9113FAC65011EA3294CB301E7C3D2F64 /* Build configuration list for PBXNativeTarget "Pods-StepMotionControl_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF260FDE602969B6DDDC72EBDC9B956 /* Debug */,
+				5E7304E66690936C10BC9C293514208B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF94DE95FC76B2A4806D91BA333A87BA /* Build configuration list for PBXNativeTarget "Pods-StepMotionControl_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A402F0D87B51D89332727AB7B340303 /* Debug */,
+				E4A61E33128AF0E16243313895C69D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

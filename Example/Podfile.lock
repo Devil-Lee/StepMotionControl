@@ -1,0 +1,16 @@
+PODS:
+  - StepMotionControl (0.1.1)
+
+DEPENDENCIES:
+  - StepMotionControl (from `../`)
+
+EXTERNAL SOURCES:
+  StepMotionControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StepMotionControl: 4162494671b78dae9b73a3e56d92d08e4f035672
+
+PODFILE CHECKSUM: d4d8e5b96e367ce89ff77d76a0fff3e5d4457799
+
+COCOAPODS: 1.9.1

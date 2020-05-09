@@ -63,10 +63,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		853CD04D770F1D3ACB3974D9 /* Pods_StepMotionControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepMotionControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9BB22BE382EC741A3BF5E75F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9BB22BE382EC741A3BF5E75F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A7A0800805D0CE31AAE4341E /* Pods-StepMotionControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepMotionControl_Example.release.xcconfig"; path = "Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C5CC41D2B71F91AEC67ACE3F /* StepMotionControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = StepMotionControl.podspec; path = ../StepMotionControl.podspec; sourceTree = "<group>"; };
-		E5C5A7D9A5FBA76A7723E389 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C5CC41D2B71F91AEC67ACE3F /* StepMotionControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StepMotionControl.podspec; path = ../StepMotionControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E5C5A7D9A5FBA76A7723E389 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				216511AE6BBB54162AE84728 /* Pods-StepMotionControl_Tests.debug.xcconfig */,
 				0C329A3B7409EDE42A4F5457 /* Pods-StepMotionControl_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				879ED945AEB9C4D5F32EBD5B /* [CP] Embed Pods Frameworks */,
+				36DEDC98FC9BB3C9697A805D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,6 +295,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		36DEDC98FC9BB3C9697A805D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/StepMotionControl/StepMotionControl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepMotionControl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6D90A07404CEFF41345E0B98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,24 +333,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		879ED945AEB9C4D5F32EBD5B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/StepMotionControl/StepMotionControl.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepMotionControl.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StepMotionControl_Example/Pods-StepMotionControl_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94C618D0574CF499A1C5C279 /* [CP] Check Pods Manifest.lock */ = {

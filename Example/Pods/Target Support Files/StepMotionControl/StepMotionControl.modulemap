@@ -1,0 +1,6 @@
+framework module StepMotionControl {
+  umbrella header "StepMotionControl-umbrella.h"
+
+  export *
+  module * { export * }
+}
