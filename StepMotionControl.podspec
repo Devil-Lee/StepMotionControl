@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        用于实现监控步数以及运动轨迹。
                        DESC
 
   s.homepage         = 'https://github.com/Devil-Lee/StepMotionControl'
@@ -28,8 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Devil-Lee/StepMotionControl.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-  s.platform     = :ios
+  s.platform     = :ios, '10.0'
 
   s.source_files = 'StepMotionControl/Classes/**/*'
   
