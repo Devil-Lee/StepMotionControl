@@ -168,7 +168,6 @@ static StepMotionManager *sharedManager;
                         if (weakSelf.stepChangeBlock) {
                             [weakSelf handleStepsDidChangeWithStepModel:currentStep];
                         }
-                        NSLog(@"步数%ld", weakSelf.step);
                     }
                 }
             }
