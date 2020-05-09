@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'StepMotionControl_Example' do
+  pod 'StepMotionControl', :path => '../'
+
+  target 'StepMotionControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
