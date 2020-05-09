@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StepMotionControl
 
 [![CI Status](https://img.shields.io/travis/Devil-Lee/StepMotionControl.svg?style=flat)](https://travis-ci.org/Devil-Lee/StepMotionControl)
@@ -27,3 +28,6 @@ Devil-Lee, 1078980842@qq.com
 ## License
 
 StepMotionControl is available under the MIT license. See the LICENSE file for more info.
+=======
+# StepMotionControl
+>>>>>>> 6d56be357e18655c86b16901db5297abba779ffb
