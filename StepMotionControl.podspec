@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StepMotionControl'
-  s.version          = '1.1.2'
+  s.version          = '1.1.3'
   s.summary          = 'StepMotionControl私有库'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                        用于实现监控步数以及运动轨迹。
+                        StepMotionControl私有库用于实现监控步数以及运动轨迹。
                        DESC
 
   s.homepage         = 'https://github.com/Devil-Lee/StepMotionControl'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/Devil-Lee/StepMotionControl.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '10.0'
+  s.platform     = :ios, '8.0'
 
   s.source_files = 'StepMotionControl/Classes/**/*'
   
