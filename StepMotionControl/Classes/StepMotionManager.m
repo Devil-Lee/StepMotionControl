@@ -25,7 +25,7 @@
 
 @property (nonatomic, retain) NSMutableArray *rawSteps; // 设备传感器采集的原始数组
 @property (nonatomic, retain) NSMutableArray *presentSteps; // 步数数组
-@property (nonatomic, copy) StepChangeBlock stepChangeBlock;
+@property (nonatomic, copy) StepChangeBlock stepChangeBlock; //暴露接口回调
 
 @end
 
