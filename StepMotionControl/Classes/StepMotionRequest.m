@@ -16,13 +16,13 @@
 
 @implementation StepMotionRequest
 
-- (void)startWithStepModel:(StepModel *)stepModel SuccessHandler:(SuccessBlock)success failureHandler:(FailureBlock)failure {
+- (void)startWithPresentSteps:(NSArray *)steps SuccessHandler:(SuccessBlock)success failureHandler:(FailureBlock)failure {
     self.successHandler = success;
     self.failureHandler = failure;
-    [self sendRequestWithStepModel:stepModel];
+    [self sendRequestWithSteps:steps];
 }
 
-- (void)sendRequestWithStepModel:(StepModel *)stepModel {
+- (void)sendRequestWithSteps:(NSArray *)steps {
     NSURLSession *session=[NSURLSession sharedSession];
     NSURL *url=[NSURL URLWithString:@"http://123.207.175.144/Test1.php"];
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];

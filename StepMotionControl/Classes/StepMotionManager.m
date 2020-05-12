@@ -20,12 +20,17 @@
 
 @interface StepMotionManager ()<CLLocationManagerDelegate>
 
+@property (nonatomic, strong) NSString *userId;
+
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CMMotionManager *motionManager;
 
+
 @property (nonatomic, retain) NSMutableArray *rawSteps; // 设备传感器采集的原始数组
 @property (nonatomic, retain) NSMutableArray *presentSteps; // 步数数组
-@property (nonatomic, copy) StepChangeBlock stepChangeBlock; //暴露接口回调
+//@property (nonatomic, copy) StepChangeBlock stepChangeBlock; //暴露接口回调
+
+@property (nonatomic,assign) BOOL isRunning;
 
 @end
 
@@ -43,8 +48,16 @@ static StepMotionManager *sharedManager;
 }
 
 //开始监控步数变化
-- (void)startMonitorStepChanges:(StepChangeBlock)change {
-    self.stepChangeBlock = change;
+- (void)startMonitorStepChangesWithUserId:(NSString *)userId {
+    
+    //判断是否重复调用
+    if(self.isRunning && self.isRunning == YES) {
+        @throw [NSException exceptionWithName:@"MonitorUsingError" reason:@"Repeated call startMonitorStepChangesOrEndMonitorStepChanges" userInfo:nil];
+    }
+    self.isRunning =YES;
+    
+    self.userId = userId;
+//    self.stepChangeBlock = change;
     self.step = 0;
 
     self.motionManager = [[CMMotionManager alloc] init];
@@ -71,11 +84,28 @@ static StepMotionManager *sharedManager;
 
 //结束监控步数变化
 - (void)endMonitorStepChanges {
+    //判断是否重复调用
+   if(!self.isRunning || self.isRunning == NO) {
+       @throw [NSException exceptionWithName:@"MonitorUsingError" reason:@"Repeated call startMonitorStepChangesOrEndMonitorStepChanges" userInfo:nil];
+   }
+    self.isRunning = NO;
     [self.motionManager stopAccelerometerUpdates];
     [self.motionManager stopGyroUpdates];
     [self.locationManager stopUpdatingLocation];
+    [self handleStepsDidWhenStopMonitor];
 }
 
+//结束监控时处理数据
+- (void)handleStepsDidWhenStopMonitor {
+    StepMotionRequest *request = [[StepMotionRequest alloc] init];
+      //上传步数数组
+      [request startWithPresentSteps:self.presentSteps SuccessHandler:^(__kindof StepMotionRequest *request, id responseObj) {
+          
+      } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
+          
+      }];
+    
+}
 - (void)startMotionManager {
     @try {
         //判断CMMotionManager是否支持加速度计、陀螺仪
@@ -119,12 +149,7 @@ static StepMotionManager *sharedManager;
             stepModel.longitude = weakSelf.locationManager.location.coordinate.longitude;
             //记录时间点
             stepModel.date = [NSDate date];
-            NSDateFormatter *df = [[NSDateFormatter alloc] init];
-            df.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-            NSString *dateStr = [df stringFromDate:stepModel.date];
-            df = nil;
-            stepModel.record_time = dateStr;
-
+           stepModel.timpstamp =  (long)([stepModel.date timeIntervalSince1970] * 1000);
             [weakSelf.rawSteps addObject:stepModel];
 
             // 每采集10条数据，大约1.0s的数据时，进行分析
@@ -165,9 +190,9 @@ static StepMotionManager *sharedManager;
                         weakSelf.step++;
                         currentStep.step = (int)weakSelf.step;
                         [weakSelf.presentSteps addObject:currentStep];
-                        if (weakSelf.stepChangeBlock) {
-                            [weakSelf handleStepsDidChangeWithStepModel:currentStep];
-                        }
+//                        if (weakSelf.stepChangeBlock) {
+//                            [weakSelf handleStepsDidChangeWithStepModel:currentStep];
+//                        }
                     }
                 }
             }
@@ -179,15 +204,10 @@ static StepMotionManager *sharedManager;
 }
 
 // 步数发生变化时处理逻辑
-- (void)handleStepsDidChangeWithStepModel:(StepModel *)stepModel {
-    self.stepChangeBlock(stepModel);
-    StepMotionRequest *request = [[StepMotionRequest alloc] init];
-    [request startWithStepModel:stepModel SuccessHandler:^(__kindof StepMotionRequest *request, id responseObj) {
-        
-    } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
-        
-    }];
-}
+//- (void)handleStepsDidChangeWithStepModel:(StepModel *)stepModel {
+//    self.stepChangeBlock(stepModel);
+//
+//}
 
 
 #pragma mark -CLLocationManagerDelegate

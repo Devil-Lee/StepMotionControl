@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "StepModel.h"
 
-typedef void (^StepChangeBlock)(__kindof StepModel *stepModel);
+//typedef void (^StepChangeBlock)(__kindof StepModel *stepModel);
 
 @interface StepMotionManager : NSObject
 
@@ -19,7 +19,8 @@ typedef void (^StepChangeBlock)(__kindof StepModel *stepModel);
 + (StepMotionManager *)sharedManager;
 
 //开始监控步数变化
-- (void)startMonitorStepChanges:(StepChangeBlock)change;
+//- (void)startMonitorStepChanges:(StepChangeBlock)change WithUserId:(NSString *)userId;
+- (void)startMonitorStepChangesWithUserId:(NSString *)userId;
 
 //结束监控步数变化
 - (void)endMonitorStepChanges;
