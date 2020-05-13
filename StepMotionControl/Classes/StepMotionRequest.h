@@ -18,6 +18,6 @@ typedef void(^FailureBlock)(__kindof StepMotionRequest *request, NSError *error)
 
 @interface StepMotionRequest : NSObject
 
-- (void)startWithPresentSteps:(NSArray *)steps SuccessHandler:(SuccessBlock)success failureHandler:(FailureBlock)failure;
+- (void)startWithPresentSteps:(NSArray *)steps UserId:(NSString *)userId SuccessHandler:(SuccessBlock)success failureHandler:(FailureBlock)failure;
 @end
 

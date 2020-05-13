@@ -21,20 +21,34 @@
 {
     [super viewDidLoad];
     [self setupSubViews];
-    [[StepMotionManager sharedManager] startMonitorStepChanges:^(__kindof StepModel *stepModel) {
-        NSLog(@"record_time, %@",stepModel.record_time);
-        NSLog(@"accelerationX, %f",stepModel.accelerationX);
-        NSLog(@"accelerationY, %f",stepModel.accelerationY);
-        NSLog(@"accelerationZ, %f",stepModel.accelerationZ);
-        NSLog(@"rotatingVectorX, %f",stepModel.rotatingVectorX);
-        NSLog(@"rotatingVectorY, %f",stepModel.rotatingVectorY);
-        NSLog(@"rotatingVectorZ, %f",stepModel.rotatingVectorZ);
-        NSLog(@"latitude, %f",stepModel.latitude);
-        NSLog(@"longitude, %f",stepModel.longitude);
-        NSLog(@"-------------------");
-    }];
-}
+//    [[StepMotionManager sharedManager] startMonitorStepChanges:^(__kindof StepModel *stepModel) {
+//        NSLog(@"record_time, %@",stepModel.record_time);
+//        NSLog(@"accelerationX, %f",stepModel.accelerationX);
+//        NSLog(@"accelerationY, %f",stepModel.accelerationY);
+//        NSLog(@"accelerationZ, %f",stepModel.accelerationZ);
+//        NSLog(@"rotatingVectorX, %f",stepModel.rotatingVectorX);
+//        NSLog(@"rotatingVectorY, %f",stepModel.rotatingVectorY);
+//        NSLog(@"rotatingVectorZ, %f",stepModel.rotatingVectorZ);
+//        NSLog(@"latitude, %f",stepModel.latitude);
+//        NSLog(@"longitude, %f",stepModel.longitude);
+//        NSLog(@"-------------------");
+//    }];
+  NSString *userId = @"testId";
+  [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:userId];
 
+//    [[StepMotionManager sharedManager]endMonitorStepChanges];
+//    @try {
+//        [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:userId];
+//    } @catch (NSException *exception) {
+//        NSLog(@"重复调用!");
+//    } @finally {
+//
+//    }
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[StepMotionManager sharedManager]endMonitorStepChanges];
+}
 - (void)setupSubViews {
     self.stepLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
     self.stepLabel.font = [UIFont systemFontOfSize:15.0];

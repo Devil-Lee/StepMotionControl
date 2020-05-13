@@ -99,11 +99,11 @@ static StepMotionManager *sharedManager;
 - (void)handleStepsDidWhenStopMonitor {
     StepMotionRequest *request = [[StepMotionRequest alloc] init];
       //上传步数数组
-      [request startWithPresentSteps:self.presentSteps SuccessHandler:^(__kindof StepMotionRequest *request, id responseObj) {
-          
-      } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
-          
-      }];
+    [request startWithPresentSteps:self.presentSteps UserId:self.userId SuccessHandler:^(__kindof StepMotionRequest *request, id responseObj) {
+        
+    } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
+        
+    }];
     
 }
 - (void)startMotionManager {
