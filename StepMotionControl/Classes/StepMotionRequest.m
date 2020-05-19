@@ -43,7 +43,7 @@
     NSArray *keyArr = @[@"accelerateX", @"accelerateY", @"accelerateZ", @"rotationX", @"rotationY", @"rotationZ", @"longitude", @"latitude", @"timestamp"];
     NSMutableArray *temp = [NSMutableArray array];
     for(StepModel *model in steps){
-       NSArray *arr =  [NSArray arrayWithObjects:[NSNumber numberWithDouble: model.accelerationX], [NSNumber numberWithDouble: model.accelerationY], [NSNumber numberWithDouble: model.accelerationZ], [NSNumber numberWithDouble: model.rotatingVectorX], [NSNumber numberWithDouble: model.rotatingVectorY], [NSNumber numberWithDouble: model.rotatingVectorZ], [NSNumber numberWithDouble: model.longitude], [NSNumber numberWithDouble: model.latitude], [NSNumber numberWithLong:model.latitude], nil];
+       NSArray *arr =  [NSArray arrayWithObjects:[NSNumber numberWithDouble: model.accelerationX], [NSNumber numberWithDouble: model.accelerationY], [NSNumber numberWithDouble: model.accelerationZ], [NSNumber numberWithDouble: model.rotatingVectorX], [NSNumber numberWithDouble: model.rotatingVectorY], [NSNumber numberWithDouble: model.rotatingVectorZ], [NSNumber numberWithDouble: model.longitude], [NSNumber numberWithDouble: model.latitude], [NSNumber numberWithLong:model.timpstamp], nil];
         [temp addObject:arr];
     }
     NSArray *valueArr = temp;

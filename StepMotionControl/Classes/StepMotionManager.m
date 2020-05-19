@@ -100,7 +100,10 @@ static StepMotionManager *sharedManager;
     StepMotionRequest *request = [[StepMotionRequest alloc] init];
       //上传步数数组
     [request startWithPresentSteps:self.presentSteps UserId:self.userId SuccessHandler:^(__kindof StepMotionRequest *request, id responseObj) {
-        
+        //上传成功清楚本地数据
+        self.step = 0;
+        [self.rawSteps removeAllObjects];
+        [self.presentSteps removeAllObjects];
     } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
         
     }];

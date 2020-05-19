@@ -33,17 +33,10 @@
 //        NSLog(@"longitude, %f",stepModel.longitude);
 //        NSLog(@"-------------------");
 //    }];
-  NSString *userId = @"testId";
+  NSString *userId = @"GCKTest";
   [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:userId];
 
-//    [[StepMotionManager sharedManager]endMonitorStepChanges];
-//    @try {
-//        [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:userId];
-//    } @catch (NSException *exception) {
-//        NSLog(@"重复调用!");
-//    } @finally {
-//
-//    }
+
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
