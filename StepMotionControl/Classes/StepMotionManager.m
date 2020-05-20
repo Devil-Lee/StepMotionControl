@@ -74,6 +74,12 @@ static StepMotionManager *sharedManager;
         self.locationManager.delegate = self;
         [self.locationManager requestAlwaysAuthorization];
         [self.locationManager requestWhenInUseAuthorization];
+        //ios9之后需要调用此api,才能实现后台定位
+        if (@available(iOS 9.0, *)) {
+            self.locationManager.allowsBackgroundLocationUpdates = YES;
+        } else {
+            // Fallback on earlier versions
+        }
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         self.locationManager.distanceFilter = LOCATION_UPDATE_MIN;
         [self.locationManager startUpdatingLocation];
@@ -128,6 +134,7 @@ static StepMotionManager *sharedManager;
         __weak typeof (self) weakSelf = self;
         [self.motionManager startGyroUpdatesToQueue:queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {}];
         [self.motionManager startAccelerometerUpdatesToQueue:queue withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+            NSLog(@"%@", [NSThread currentThread]);
             if (!weakSelf.motionManager.isAccelerometerActive || !weakSelf.motionManager.isGyroActive) {
                 NSLog(@"设备传感器状态错误");
                 return;
@@ -222,5 +229,6 @@ static StepMotionManager *sharedManager;
         default: break;
     }
 }
+
 
 @end

@@ -35,8 +35,6 @@
 //    }];
   NSString *userId = @"GCKTest";
   [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:userId];
-
-
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
