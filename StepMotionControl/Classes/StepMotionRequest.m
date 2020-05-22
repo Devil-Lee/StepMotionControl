@@ -10,7 +10,7 @@
 #import "StepModel.h"
 
 //上传跑步信息的url
-#define commitRunDataURL   [NSURL URLWithString:@"https://run.topviewclub.cn/run/commitRunData"]
+#define COMMITRUNDATA_URL   [NSURL URLWithString:@"https://run.topviewclub.cn/run/commitRunData"]
 
 @interface StepMotionRequest ()
 @property (nonatomic, copy, nullable) SuccessBlock successHandler;
@@ -35,7 +35,7 @@
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfigure];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:commitRunDataURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:COMMITRUNDATA_URL];
     request.HTTPMethod =  @"POST";
     
     //data数组
@@ -59,7 +59,12 @@
 //    id object = [NSJSONSerialization JSONObjectWithData:[NSJSONSerialization dataWithJSONObject:dict options:kNilOptions error:nil] options:kNilOptions error:nil];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         id responseObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        
+        if ([responseObject[@"message"] isEqual: @"success"]) {
+        self.successHandler((StepMotionRequest *)request, responseObject);
+        }
+        else {
+            self.failureHandler((StepMotionRequest *)request, responseObject);
+        }
         NSLog(@"%@",responseObject);
     }];
     [dataTask resume];

@@ -18,6 +18,9 @@
 // 定位功能最小更新距离 (米)
 #define LOCATION_UPDATE_MIN 1
 
+// 存放本地步数数组的路径
+#define LOCAL_STEPS_PATH   [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject]stringByAppendingPathComponent:@"presentSteps.archive"]
+
 @interface StepMotionManager ()<CLLocationManagerDelegate>
 
 @property (nonatomic, strong) NSString *userId;
@@ -29,6 +32,7 @@
 @property (nonatomic, retain) NSMutableArray *rawSteps; // 设备传感器采集的原始数组
 @property (nonatomic, retain) NSMutableArray *presentSteps; // 步数数组
 //@property (nonatomic, copy) StepChangeBlock stepChangeBlock; //暴露接口回调
+
 
 @property (nonatomic,assign) BOOL isRunning;
 
@@ -46,7 +50,17 @@ static StepMotionManager *sharedManager;
     }
     return sharedManager;
 }
+#pragma mark 读写数据操作
+//读取本地存储的步数数组数据
+- (NSArray *)readLocalStepsData {
+    NSArray *localSteps = [NSKeyedUnarchiver unarchiveObjectWithFile:LOCAL_STEPS_PATH];
+    return localSteps;
+}
 
+//将步数数组数据存入本地(返回BOOL说明是否写入成功)
+- (BOOL)writeStepsToLocalData:(NSArray *)steps {
+  return [NSKeyedArchiver archiveRootObject:steps toFile:LOCAL_STEPS_PATH];
+}
 //开始监控步数变化
 - (void)startMonitorStepChangesWithUserId:(NSString *)userId {
     
@@ -88,6 +102,13 @@ static StepMotionManager *sharedManager;
     [self startMotionManager];
 }
 
+//恢复上次监控步数变化
+- (void)resumeToLastMonitorStepChangesWithUserId:(NSString *)userId{
+    self.presentSteps = [NSMutableArray arrayWithArray: [self readLocalStepsData]];
+    self.step = self.presentSteps.count;
+    [self startMonitorStepChangesWithUserId:userId];
+    
+}
 //结束监控步数变化
 - (void)endMonitorStepChanges {
     //判断是否重复调用
@@ -114,7 +135,11 @@ static StepMotionManager *sharedManager;
         
     }];
     
+   
+    
+    
 }
+//监控步数变化
 - (void)startMotionManager {
     @try {
         //判断CMMotionManager是否支持加速度计、陀螺仪
@@ -134,7 +159,7 @@ static StepMotionManager *sharedManager;
         __weak typeof (self) weakSelf = self;
         [self.motionManager startGyroUpdatesToQueue:queue withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {}];
         [self.motionManager startAccelerometerUpdatesToQueue:queue withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
-            NSLog(@"%@", [NSThread currentThread]);
+           // NSLog(@"%@", [NSThread currentThread]);
             if (!weakSelf.motionManager.isAccelerometerActive || !weakSelf.motionManager.isGyroActive) {
                 NSLog(@"设备传感器状态错误");
                 return;
@@ -191,20 +216,27 @@ static StepMotionManager *sharedManager;
                 //初始化数据
                 if (weakSelf.presentSteps == nil) {
                     weakSelf.presentSteps = [[NSMutableArray alloc] init];
+                    
                 }
 
                 //踩点处理
                 for (int j = 0; j < tempSteps.count; j++) {
                     StepModel *currentStep = (StepModel *)[tempSteps objectAtIndex:j];
                     if (weakSelf.motionManager.isAccelerometerActive && weakSelf.motionManager.isGyroActive) {
-                        weakSelf.step++;
+                        weakSelf.step ++;
                         currentStep.step = (int)weakSelf.step;
                         [weakSelf.presentSteps addObject:currentStep];
+                           // 写入本地
+                        [weakSelf writeStepsToLocalData:weakSelf.presentSteps];
+
 //                        if (weakSelf.stepChangeBlock) {
 //                            [weakSelf handleStepsDidChangeWithStepModel:currentStep];
 //                        }
                     }
                 }
+                
+               
+                  
             }
         }];
     } @catch (NSException *exception) {
