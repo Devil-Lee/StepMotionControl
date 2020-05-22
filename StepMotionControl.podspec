@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StepMotionControl'
-  s.version          = '1.1.8'
+  s.version          = '1.1.7'
   s.summary          = 'StepMotionControl私有库'
 
 # This description is used to generate tags and improve search results.
