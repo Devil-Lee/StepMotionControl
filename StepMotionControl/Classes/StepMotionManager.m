@@ -131,7 +131,7 @@ static StepMotionManager *sharedManager;
         self.step = 0;
         [self.rawSteps removeAllObjects];
         [self.presentSteps removeAllObjects];
-    } failureHandler:^(__kindof StepMotionRequest *request, NSError *error) {
+    } failureHandler:^(__kindof StepMotionRequest *request, id responseObj) {
         
     }];
     

@@ -29,6 +29,18 @@
 }
 
 - (void)sendRequestWithSteps:(NSArray *)steps {
+    //判空
+    if(!steps || steps.count == 0) {
+        NSDictionary *responsedict = @{
+            @"message"  :  @"跑步数据为空",
+            @"code"     :  [NSNumber numberWithLong:400],
+            @"success"  :  @NO,
+            @"data"     :  @NO
+                              };
+        self.successHandler(nil, responsedict);
+        return;
+
+    }
     //配置session
     NSURLSessionConfiguration *sessionConfigure = [NSURLSessionConfiguration defaultSessionConfiguration];
     sessionConfigure.HTTPAdditionalHeaders = @{ @"Content-Type": @"application/json" };
@@ -50,6 +62,8 @@
     [dataArr addObject:keyArr];
     [dataArr addObjectsFromArray:valueArr];
     NSData *jsondata = [NSJSONSerialization dataWithJSONObject:dataArr options:kNilOptions error:nil];
+   // Byte *testByte = (Byte *)[jsondata bytes];
+    
     NSString *jsonStr = [NSString stringWithUTF8String:[jsondata bytes]];
     NSDictionary *dict = @{
         @"userId" : self.userId,

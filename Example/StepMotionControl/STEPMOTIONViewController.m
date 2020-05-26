@@ -24,8 +24,8 @@
     [super viewDidLoad];
     [self setupSubViews];
     _userId = @"GCKTest";
-  //[[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:_userId];
-    [[StepMotionManager sharedManager]resumeToLastMonitorStepChangesWithUserId:_userId];
+ [[StepMotionManager sharedManager] startMonitorStepChangesWithUserId:_userId];
+  //  [[StepMotionManager sharedManager]resumeToLastMonitorStepChangesWithUserId:_userId];
 //    [[StepMotionManager sharedManager] startMonitorStepChanges:^(__kindof StepModel *stepModel) {
 //        NSLog(@"record_time, %@",stepModel.record_time);
 //        NSLog(@"accelerationX, %f",stepModel.accelerationX);
